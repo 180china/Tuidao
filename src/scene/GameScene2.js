@@ -8,7 +8,7 @@ GAME.GameScene2 = function ()
 
     this.init = function ()
     {
-        /////////
+        ///////////
         GAME.stage.setBackgroundColor (0x28bde8);
         ////////
 
