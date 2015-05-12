@@ -128,7 +128,7 @@ GAME.GameScene5 = function ()
     function addListener()
     {
         _stageContainer.interactive = true;
-        _stageContainer.mousedown = _stageContainer.touchstart = function ()
+        _stageContainer.mouseup = _stageContainer.tap = function ()
         {
             _this.sceneOut();
         }

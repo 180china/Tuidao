@@ -78,7 +78,7 @@ GAME.GameScene3 = function ()
 
 
         _stageContainer.interactive = true;
-        _stageContainer.mousedown = _stageContainer.touchstart = function ()
+        _stageContainer.mouseup = _stageContainer.tap = function ()
         {
             _this.sceneOut();
         }

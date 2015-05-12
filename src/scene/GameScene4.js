@@ -10,6 +10,7 @@ GAME.GameScene4 = function ()
     var _mask;
     var SNum=0;
     var TimeNum=9;
+    var maskT=1.5;
 
     this.init = function ()
     {
@@ -187,6 +188,7 @@ GAME.GameScene4 = function ()
 
     }
 
+
     function initMask()
     {
         var _x=(GAME.stageWidth-200)*Math.random()+100;
@@ -201,7 +203,8 @@ GAME.GameScene4 = function ()
         TweenMax.to(_mask.scale, 0.4, {x:1,y:1,ease:Elastic.easeOut});
 
 
-        TweenMax.delayedCall(1,initMask);
+        TweenMax.delayedCall(maskT,initMask);
+        maskT-=0.5;
 
     }
 
