@@ -16,8 +16,18 @@ GAME.LoadingScene = function ()
     }
     this.sceneIn = function ()
     {
-        TweenMax.to(this, 1, {alpha:1});
+        TweenMax.to(_this, 1, {alpha:1});
+        move();
     }
+
+    function move()
+    {
+        TweenMax.to(_snow.scale, 1, {x:0.8,y:0.8});
+        TweenMax.to(_snow.scale, 1, {x:1,y:1,ease:Elastic.easeOut,delay:1});
+
+        TweenMax.delayedCall(2,move);
+    }
+
     this.sceneOut = function ()
     {
         GAME.Scene.prototype.sceneIn.apply(this);
@@ -27,7 +37,7 @@ GAME.LoadingScene = function ()
     }
     this.update=function()
     {
-        _snow.rotation+=0.03;
+        //_snow.rotation+=0.03;
     }
 }
 GAME.Utils.inherit(GAME.LoadingScene, GAME.Scene);
