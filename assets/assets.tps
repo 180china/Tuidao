@@ -202,6 +202,7 @@
             <filename>original/scene5/s5_f1.png</filename>
             <filename>original/scene5/s5_f2.png</filename>
             <filename>original/scene4/mask.png</filename>
+            <filename>original/scene6/s6_p4.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

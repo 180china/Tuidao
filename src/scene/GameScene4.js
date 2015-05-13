@@ -203,8 +203,8 @@ GAME.GameScene4 = function ()
 
         if(TimeNum>=0)
         {
-            TweenMax.delayedCall(maskT, initMask);
-            maskT -= 0.04;
+            TweenMax.delayedCall(0.6, initMask);
+            //maskT -= 0.04;
         }
 
     }

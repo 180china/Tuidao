@@ -61,6 +61,9 @@ GAME.GameScene6 = function ()
 
         }
 
+        var p6=cSprite("s6_p4.png",320,GAME.stageHeight-94,gms,null,150,41,0.5,1,gms,gms,null);
+        _stageContainer.addChild(p6);
+
         var bg3=cSprite("bg3.jpg",11,0,gms,gms,629,638,0,0,gms,gms,0);
         _stageContainer.addChild(bg3);
         //尝试手动同步当前分支以及目标分支和再试一次。如果这个错误持续请电子邮件支持

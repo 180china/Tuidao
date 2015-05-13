@@ -17,7 +17,7 @@ GAME.GameScene5 = function ()
 
         // 分享到朋友圈
         wx.onMenuShareTimeline({
-            title: '推倒TA你有'+GAME.SNum+'套，羡慕吧？',
+            title: '推倒TA我有'+GAME.SNum+'套，羡慕吧？',
             link: 'http://test.180china.com/tuidao/',
             imgUrl: 'http://test.180china.com/tuidao/share.jpg',
             success: function () {
@@ -30,7 +30,7 @@ GAME.GameScene5 = function ()
 
         //分享给朋友
         wx.onMenuShareAppMessage({
-            title: '推倒TA你有'+GAME.SNum+'套',
+            title: '推倒TA我有'+GAME.SNum+'套',
             desc: '激情520快来到，推倒技能get√',
             link: 'http://test.180china.com/tuidao/',
             imgUrl: 'http://test.180china.com/tuidao/share.jpg',
@@ -153,16 +153,19 @@ GAME.GameScene5 = function ()
         TweenMax.delayedCall(1.8,tMovie);
 
 
-        TweenMax.delayedCall(2,addListener);
+        TweenMax.delayedCall(5,addListener);
     }
 
     function addListener()
     {
+        /*
         _stageContainer.interactive = true;
         _stageContainer.mouseup = _stageContainer.tap = function ()
         {
             _this.sceneOut();
         }
+        */
+        _this.sceneOut();
     }
 
 
