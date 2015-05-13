@@ -47,14 +47,14 @@ GAME.GameScene6 = function ()
         var p4=cSprite("s6_btn1.png",112,523,gms,gms,185,195,0,0,gms,gms,null);
         _stageContainer.addChild(p4);
         p4.interactive=true;
-        p4.tap =function()
+        p4.mouseup = p4.tap =function()
         {
             _this.dispatchEvent(new SPP.Event(GAME.ON_REPLAY));
         }
         var p5=cSprite("s6_btn2.png",362,496,gms,gms,181,216,0,0,gms,gms,null);
         _stageContainer.addChild(p5);
         p5.interactive=true;
-        p5.tap =function()
+        p5.mouseup = p5.tap =function()
         {
             TweenMax.to(bg3, 0.6, { alpha: 1,ease:Strong.easeOut});
             TweenMax.to(bg3, 0.6, { alpha: 0,ease:Strong.easeOut,delay:1});

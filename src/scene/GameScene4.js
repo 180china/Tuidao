@@ -10,7 +10,7 @@ GAME.GameScene4 = function ()
     var _mask;
     var SNum=0;
     var TimeNum=9;
-    var maskT=1.5;
+    var maskT=1;
 
     this.init = function ()
     {
@@ -56,7 +56,7 @@ GAME.GameScene4 = function ()
 
         if(!GAME.Utils.isAndroid())
         {
-            _p1 = new PIXI.Sprite(PIXI.Texture.fromImage("s2_p5.jpg"));
+            _p1 = new PIXI.Sprite(PIXI.Texture.fromImage("s2_p18.jpg"));
             _p1.anchor.x = 0.5;
             _p1.anchor.y = 0.5;
             _p1.scale.y = _p1.scale.x = 1 * GAME.imageScale;
@@ -78,10 +78,9 @@ GAME.GameScene4 = function ()
             _mask.position.y = -GAME.stageHeight / 2;
             _stageContainer.mask = _mask;
         }else{
-            _mask = new PIXI.Graphics();
-            _mask.lineStyle(0);
-            _mask.beginFill(0x34b8e5, 1);
-            _mask.drawCircle(0, 0, 90 * GAME.imageScale);
+            _mask = new PIXI.Sprite(PIXI.Texture.fromImage("mask.png"));
+            _mask.anchor.x = 0.5;
+            _mask.anchor.y = 0.5;
             _stageContainer.addChild(_mask);
             _mask.position.x = -GAME.stageWidth / 2;
             _mask.position.y = -GAME.stageHeight / 2;
@@ -200,11 +199,13 @@ GAME.GameScene4 = function ()
         _p2.position.y = _y;
 
         _mask.scale.x=_mask.scale.y=0;
-        TweenMax.to(_mask.scale, 0.4, {x:1,y:1,ease:Elastic.easeOut});
+        TweenMax.to(_mask.scale, 0.4, {x:1,y:1,ease:Strong.easeOut});
 
-
-        TweenMax.delayedCall(maskT,initMask);
-        maskT-=0.5;
+        if(TimeNum>=0)
+        {
+            TweenMax.delayedCall(maskT, initMask);
+            maskT -= 0.04;
+        }
 
     }
 
@@ -232,9 +233,13 @@ GAME.GameScene4 = function ()
         if(_t21.id!=_st1)setTxtNum(_t21,_st1);
 
         _p2.setTexture(PIXI.Texture.fromImage("s4_p4.png"));
+        _p2.scale.x=_p2.scale.y=1.3 * GAME.imageScale;
+        _p2.interactive = false;
         TweenMax.delayedCall(0.2,function()
         {
             _p2.setTexture(PIXI.Texture.fromImage("s4_p1.png"));
+            _p2.scale.x=_p2.scale.y=1 * GAME.imageScale;
+            _p2.interactive = true;
         });
     }
 
