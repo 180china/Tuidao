@@ -16,4 +16,5 @@ GAME.retinaSupport=true;
 GAME.sound=null;
 GAME.imageScale=1;
 GAME.SNum=0;
+GAME.isEnd=false;
 

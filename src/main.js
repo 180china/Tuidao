@@ -86,7 +86,7 @@ function initScene()
 
     //playSound("bgSound");
 
-    initScene1();
+    initScene4();
 }
 
 function initScene1()

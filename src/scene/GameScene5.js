@@ -15,6 +15,7 @@ GAME.GameScene5 = function ()
         GAME.stage.setBackgroundColor (0x28bde8);
         ////////
 
+        GAME.isEnd=true;
     }
 
 
@@ -116,6 +117,8 @@ GAME.GameScene5 = function ()
 
         TweenMax.delayedCall(1,smoke2Movie);
         TweenMax.delayedCall(2,smoke2Movie);
+        TweenMax.delayedCall(2.5,smoke2Movie);
+        TweenMax.delayedCall(3,smoke2Movie);
 
 
 
@@ -194,7 +197,10 @@ GAME.GameScene5 = function ()
         GAME.Scene.prototype.sceneOut.apply(this);
 
         TweenMax.to(_this, 0.4, {alpha:0,ease:Strong.easeOut,
-            onComplete:function(){_this.sceneOutComplete()}
+            onComplete:function(){
+                TweenMax.killAll();
+                _this.sceneOutComplete();
+            }
         });
     }
 
