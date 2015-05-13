@@ -143,17 +143,17 @@ GAME.GameScene5 = function ()
 
 
 
+        TweenMax.delayedCall(0.5,smoke2Movie);
         TweenMax.delayedCall(1,smoke2Movie);
-        TweenMax.delayedCall(2,smoke2Movie);
-        TweenMax.delayedCall(2.5,smoke2Movie);
-        TweenMax.delayedCall(3,smoke2Movie);
+        TweenMax.delayedCall(1.5,smoke2Movie);
+        TweenMax.delayedCall(1.8,smoke2Movie);
 
 
 
-        TweenMax.delayedCall(1.8,tMovie);
+        TweenMax.delayedCall(1.2,tMovie);
 
 
-        TweenMax.delayedCall(5,addListener);
+        TweenMax.delayedCall(6,addListener);
     }
 
     function addListener()
