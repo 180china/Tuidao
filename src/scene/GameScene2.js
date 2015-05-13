@@ -59,7 +59,7 @@ GAME.GameScene2 = function ()
 
         if(frameNum<18)
         {
-            TweenMax.delayedCall(0.08,playMc);
+            TweenMax.delayedCall(0.1,playMc);
         }else
         {
             _this.sceneOut();

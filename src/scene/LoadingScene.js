@@ -22,10 +22,10 @@ GAME.LoadingScene = function ()
 
     function move()
     {
-        TweenMax.to(_snow.scale, 1, {x:0.8,y:0.8});
+        TweenMax.to(_snow.scale, 0.6, {x:0.8,y:0.8});
         TweenMax.to(_snow.scale, 1, {x:1,y:1,ease:Elastic.easeOut,delay:1});
 
-        TweenMax.delayedCall(2,move);
+        TweenMax.delayedCall(1.6,move);
     }
 
     this.sceneOut = function ()

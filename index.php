@@ -63,68 +63,35 @@ $signPackage = $jssdk->GetSignPackage();
         });
         wx.ready(function(){
            
-            if(GAME.isEnd)
-            {
-                // 分享到朋友圈
-                wx.onMenuShareTimeline({
-                    title: '推倒TA你有'+GAME.SNum+'套', 
-                    link: 'http://test.180china.com/tuidao/', 
-                    imgUrl: 'http://test.180china.com/tuidao/', 
-                    success: function () {
-                        // 用户确认分享后执行的回调函数
-                    },
-                    cancel: function () {
-                        // 用户取消分享后执行的回调函数
-                    }
-                });
+            // 分享到朋友圈
+            wx.onMenuShareTimeline({
+                title: '推倒TA你有几套？', 
+                link: 'http://test.180china.com/tuidao/', 
+                imgUrl: 'http://test.180china.com/tuidao/share.jpg', 
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
 
-                //分享给朋友
-                wx.onMenuShareAppMessage({
-                    title: '推倒TA你有'+GAME.SNum+'套，羡慕吧？', 
-                    desc: '激情520快来到，推倒技能get√', 
-                    link: 'http://test.180china.com/tuidao/', 
-                    imgUrl: 'http://test.180china.com/tuidao/', 
-                    type: 'link', // 分享类型,music、video或link，不填默认为link
-                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-                    success: function () {
-                        // 用户确认分享后执行的回调函数
-                        //alert("分享朋友成功");
-                    },
-                    cancel: function () {
-                        // 用户取消分享后执行的回调函数
-                    }
-                });
-            }else{
-                // 分享到朋友圈
-                wx.onMenuShareTimeline({
-                    title: '推倒TA你有几套？', 
-                    link: 'http://test.180china.com/tuidao/', 
-                    imgUrl: 'http://test.180china.com/tuidao/', 
-                    success: function () {
-                        // 用户确认分享后执行的回调函数
-                    },
-                    cancel: function () {
-                        // 用户取消分享后执行的回调函数
-                    }
-                });  
-
-                //分享给朋友
-                wx.onMenuShareAppMessage({
-                    title: '推倒TA你有几套？', 
-                    desc: '激情520快来到，推倒技能get√', 
-                    link: 'http://test.180china.com/tuidao/', 
-                    imgUrl: 'http://test.180china.com/tuidao/', 
-                    type: 'link', // 分享类型,music、video或link，不填默认为link
-                    dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
-                    success: function () {
-                        // 用户确认分享后执行的回调函数
-                        //alert("分享朋友成功");
-                    },
-                    cancel: function () {
-                        // 用户取消分享后执行的回调函数
-                    }
-                });
-            }
+            //分享给朋友
+            wx.onMenuShareAppMessage({
+                title: '推倒TA你有几套？', 
+                desc: '激情520快来到，推倒技能get√', 
+                link: 'http://test.180china.com/tuidao/', 
+                imgUrl: 'http://test.180china.com/tuidao/share.jpg', 
+                type: 'link', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () {
+                    // 用户确认分享后执行的回调函数
+                    //alert("分享朋友成功");
+                },
+                cancel: function () {
+                    // 用户取消分享后执行的回调函数
+                }
+            });
 
             
         });
