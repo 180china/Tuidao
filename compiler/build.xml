@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<project basedir="." default="compile">
+	<taskdef name="jscomp" classname="com.google.javascript.jscomp.ant.CompileTask" classpath="compiler.jar" />
+	<target name="compile">
+		<jscomp compilationLevel="simple" debug="false" output="../bin/js/libs.js">
+			<sources dir="../libs">
+				<file name="jquery-1.8.0.min.js" />
+				<file name="stats.min.js" />
+				<file name="pixi.js" />
+				<file name="spp.min.js" />
+				<file name="TimelineLite.min.js" />
+				<file name="TweenMax.min.js" />
+				<file name="EasePack.min.js" />
+			</sources>
+		</jscomp>
+		<jscomp compilationLevel="simple" debug="false" output="../bin/js/main.js">
+			<sources dir="../src">
+				<file name="Game.js" />
+				<file name="Utils.js" />
+                
+				<file name="scene/Scene.js" />
+				<file name="scene/GameScene1.js" />
+                <file name="scene/GameScene2.js" />
+                <file name="scene/GameScene3.js" />
+                <file name="scene/GameScene4.js" />
+                <file name="scene/GameScene5.js" />
+                <file name="scene/GameScene6.js" />
+                
+				<file name="scene/LoadingScene.js" />
+                <file name="AssetsManager.js" />
+                
+				<file name="main.js" />
+			</sources>
+		</jscomp>
+	</target>
+</project>

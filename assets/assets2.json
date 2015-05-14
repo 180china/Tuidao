@@ -155,7 +155,7 @@
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker ",
 	"version": "1.0",
-	"image": "assets2.jpg",
+	"image": "http://test.180china.com/Tuidao/assets/assets2.jpg",
 	"format": "RGBA8888",
 	"size": {"w":1895,"h":4036},
 	"scale": "1",
