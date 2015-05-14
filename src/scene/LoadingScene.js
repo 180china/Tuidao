@@ -7,7 +7,7 @@ GAME.LoadingScene = function ()
     this.init=function()
     {
         this.alpha=0;
-        var _texture = PIXI.Texture.fromImage("assets/loading.png");
+        var _texture = PIXI.Texture.fromImage(GAME.localURL+"assets/loading.png");
         _snow=new PIXI.Sprite(_texture);
         _snow.anchor.x=_snow.anchor.y=0.5;
         _snow.position.x=GAME.stageWidth*0.5;

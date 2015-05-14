@@ -18,10 +18,11 @@ GAME.GameScene5 = function ()
         // 分享到朋友圈
         wx.onMenuShareTimeline({
             title: '推倒TA我有'+GAME.SNum+'套，羡慕吧？',
-            link: 'http://test.180china.com/tuidao/',
-            imgUrl: 'http://test.180china.com/tuidao/share.jpg',
+            link: GAME.localURL,
+            imgUrl: GAME.localURL+'share.jpg',
             success: function () {
                 // 用户确认分享后执行的回调函数
+                window.location.replace("http://activity.metao.com/promotion/520hongbao?utm_source=game&utm_content=520hongbao&utm_term=chuotao_20150514");
             },
             cancel: function () {
                 // 用户取消分享后执行的回调函数
@@ -32,13 +33,14 @@ GAME.GameScene5 = function ()
         wx.onMenuShareAppMessage({
             title: '推倒TA我有'+GAME.SNum+'套',
             desc: '激情520快来到，推倒技能get√',
-            link: 'http://test.180china.com/tuidao/',
-            imgUrl: 'http://test.180china.com/tuidao/share.jpg',
+            link: GAME.localURL,
+            imgUrl: GAME.localURL+'share.jpg',
             type: 'link', // 分享类型,music、video或link，不填默认为link
             dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
             success: function () {
                 // 用户确认分享后执行的回调函数
-                //alert("分享朋友成功");
+                // alert("分享朋友成功");
+                window.location.replace("http://activity.metao.com/promotion/520hongbao?utm_source=game&utm_content=520hongbao&utm_term=chuotao_20150514");
             },
             cancel: function () {
                 // 用户取消分享后执行的回调函数

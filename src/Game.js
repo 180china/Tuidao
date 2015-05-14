@@ -18,3 +18,5 @@ GAME.imageScale=1;
 GAME.SNum=0;
 GAME.isEnd=false;
 
+GAME.localURL="http://test.180china.com/tuidao/";
+

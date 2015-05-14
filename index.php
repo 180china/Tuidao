@@ -12,36 +12,36 @@ $signPackage = $jssdk->GetSignPackage();
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>推倒TA你有几套</title>
-    <link type="text/css" rel="stylesheet" href="style.css" />
+    <link type="text/css" rel="stylesheet" href="http://test.180china.com/tuidao/style.css" />
 	
 </head>
 <body>
     <canvas id="canvas">Your borwser does not suport html5 canvans!</canvas>
     <div id="landscape" style="display:none"></div>
     
-    <script src="libs/jquery-1.8.0.min.js"></script>
-    <script src="libs/stats.min.js"></script>
-    <script src="libs/pixi.js"></script>
-    <script src="libs/spp.min.js"></script>
-    <script src="libs/TimelineLite.min.js"></script>
-    <script src="libs/TweenMax.min.js"></script>
-    <script src="libs/EasePack.min.js"></script>
+    <script src="http://test.180china.com/tuidao/libs/jquery-1.8.0.min.js"></script>
+    <script src="http://test.180china.com/tuidao/libs/stats.min.js"></script>
+    <script src="http://test.180china.com/tuidao/libs/pixi.js"></script>
+    <script src="http://test.180china.com/tuidao/libs/spp.min.js"></script>
+    <script src="http://test.180china.com/tuidao/libs/TimelineLite.min.js"></script>
+    <script src="http://test.180china.com/tuidao/libs/TweenMax.min.js"></script>
+    <script src="http://test.180china.com/tuidao/libs/EasePack.min.js"></script>
 
-    <script src="src/Game.js"></script>
-    <script src="src/Utils.js"></script>
+    <script src="http://test.180china.com/tuidao/src/Game.js"></script>
+    <script src="http://test.180china.com/tuidao/src/Utils.js"></script>
 
-    <script src="src/scene/Scene.js"></script>
-    <script src="src/scene/GameScene1.js"></script>
-    <script src="src/scene/GameScene2.js"></script>
-    <script src="src/scene/GameScene3.js"></script>
-    <script src="src/scene/GameScene4.js"></script>
-    <script src="src/scene/GameScene5.js"></script>
-    <script src="src/scene/GameScene6.js"></script>
+    <script src="http://test.180china.com/tuidao/src/scene/Scene.js"></script>
+    <script src="http://test.180china.com/tuidao/src/scene/GameScene1.js"></script>
+    <script src="http://test.180china.com/tuidao/src/scene/GameScene2.js"></script>
+    <script src="http://test.180china.com/tuidao/src/scene/GameScene3.js"></script>
+    <script src="http://test.180china.com/tuidao/src/scene/GameScene4.js"></script>
+    <script src="http://test.180china.com/tuidao/src/scene/GameScene5.js"></script>
+    <script src="http://test.180china.com/tuidao/src/scene/GameScene6.js"></script>
 
-    <script src="src/scene/LoadingScene.js"></script>
+    <script src="http://test.180china.com/tuidao/src/scene/LoadingScene.js"></script>
 
-    <script src="src/AssetsManager.js"></script>
-    <script src="src/main.js"></script>
+    <script src="http://test.180china.com/tuidao/src/AssetsManager.js"></script>
+    <script src="http://test.180china.com/tuidao/src/main.js"></script>
 
 
 
@@ -66,10 +66,11 @@ $signPackage = $jssdk->GetSignPackage();
             // 分享到朋友圈
             wx.onMenuShareTimeline({
                 title: '推倒TA你有几套？', 
-                link: 'http://test.180china.com/tuidao/', 
-                imgUrl: 'http://test.180china.com/tuidao/share.jpg', 
+                link: GAME.localURL, 
+                imgUrl: GAME.localURL+'share.jpg', 
                 success: function () {
                     // 用户确认分享后执行的回调函数
+                    window.location.replace("http://activity.metao.com/promotion/520hongbao?utm_source=game&utm_content=520hongbao&utm_term=chuotao_20150514");
                 },
                 cancel: function () {
                     // 用户取消分享后执行的回调函数
@@ -80,13 +81,14 @@ $signPackage = $jssdk->GetSignPackage();
             wx.onMenuShareAppMessage({
                 title: '推倒TA你有几套？', 
                 desc: '激情520快来到，推倒技能get√', 
-                link: 'http://test.180china.com/tuidao/', 
-                imgUrl: 'http://test.180china.com/tuidao/share.jpg', 
+                link: GAME.localURL, 
+                imgUrl: GAME.localURL+'share.jpg', 
                 type: 'link', // 分享类型,music、video或link，不填默认为link
                 dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
                 success: function () {
                     // 用户确认分享后执行的回调函数
                     //alert("分享朋友成功");
+                    window.location.replace("http://activity.metao.com/promotion/520hongbao?utm_source=game&utm_content=520hongbao&utm_term=chuotao_20150514");
                 },
                 cancel: function () {
                     // 用户取消分享后执行的回调函数

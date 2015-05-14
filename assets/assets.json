@@ -266,11 +266,11 @@
 },
 "s6_p1.png":
 {
-	"frame": {"x":1017,"y":2,"w":270,"h":253},
+	"frame": {"x":1017,"y":2,"w":270,"h":302},
 	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":270,"h":253},
-	"sourceSize": {"w":270,"h":253}
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":2,"w":270,"h":302},
+	"sourceSize": {"w":270,"h":304}
 },
 "s6_p2.png":
 {
@@ -319,6 +319,6 @@
 	"format": "RGBA8888",
 	"size": {"w":1618,"h":973},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:664b73bf054f385b5c792ead85044d33:1/1$"
+	"smartupdate": "$TexturePacker:SmartUpdate:906e8826824285db4e07a4dbfa9f5b2e:1/1$"
 }
 }
