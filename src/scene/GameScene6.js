@@ -43,6 +43,11 @@ GAME.GameScene6 = function ()
         _stageContainer.addChild(p2);
         var p3=cSprite("s6_p3.png",0,GAME.stageHeight,gms,null,640,73,0,1,gms,gms,null);
         _stageContainer.addChild(p3);
+        p3.interactive=true;
+        p3.mouseup = p3.tap =function()
+        {
+            window.location.replace("http://520.metao.com?utm_source=game&utm_content=520&utm_term=chuotao_20150514");
+        }
 
         var p4=cSprite("s6_btn1.png",112,523,gms,gms,185,195,0,0,gms,gms,null);
         _stageContainer.addChild(p4);

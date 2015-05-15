@@ -237,10 +237,5 @@ GAME.GameScene5 = function ()
         });
     }
 
-
-
-
-
-
 };
 GAME.Utils.inherit(GAME.GameScene5, GAME.Scene);
