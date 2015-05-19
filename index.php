@@ -66,7 +66,7 @@ $signPackage = $jssdk->GetSignPackage();
             // 分享到朋友圈
             wx.onMenuShareTimeline({
                 title: '推倒TA你有几套？', 
-                link: GAME.localURL, 
+                link:'http://activity.metao.com/marketing/520taotao',
                 imgUrl: GAME.localURL+'share.jpg', 
                 success: function () {
                     // 用户确认分享后执行的回调函数
@@ -81,7 +81,7 @@ $signPackage = $jssdk->GetSignPackage();
             wx.onMenuShareAppMessage({
                 title: '推倒TA你有几套？', 
                 desc: '激情520快来到，推倒技能get√', 
-                link: GAME.localURL, 
+                link:'http://activity.metao.com/marketing/520taotao',
                 imgUrl: GAME.localURL+'share.jpg', 
                 type: 'link', // 分享类型,music、video或link，不填默认为link
                 dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
